@@ -8,8 +8,7 @@ const grayMatter = require('gray-matter');
 const SRC = 'src';
 const DEST = 'public';
 
-// ────────────────────────────────────────────────
-// Helper: generate clean trailing-slash URL for templates
+// Pretty URls with trailing-slash URL for templates
 function getUrl(relPath) {
   let clean = relPath
     .replace(/^pages\//, '')
@@ -23,7 +22,6 @@ function getUrl(relPath) {
   return '/' + clean + '/';
 }
 
-// ────────────────────────────────────────────────
 // Load global data (metadata.json)
 let globalData = {
   site: { title: 'Untitled Site', description: '' },
@@ -47,7 +45,6 @@ async function loadGlobalData() {
   }
 }
 
-// ────────────────────────────────────────────────
 // Configure Nunjucks
 nunjucks.configure(SRC, {
   autoescape: true,
@@ -56,7 +53,6 @@ nunjucks.configure(SRC, {
   lstripBlocks: true
 });
 
-// ────────────────────────────────────────────────
 // Copy static assets
 async function copyStaticAssets() {
   const staticPatterns = [
@@ -81,7 +77,6 @@ async function copyStaticAssets() {
   }
 }
 
-// ────────────────────────────────────────────────
 // Main build function
 async function build() {
   console.time('Build completed');
@@ -144,7 +139,6 @@ async function build() {
       context.content = renderedPageContent;
       html = nunjucks.render(layoutPath, context);
 
-      // ────────────────────────────────────────────────
       // Pretty URLs with trailing slash → folder/index.html
       let cleanPath = relPath
         .replace(/^pages\//, '')
@@ -173,7 +167,6 @@ async function build() {
   console.log('Build finished successfully.');
 }
 
-// ────────────────────────────────────────────────
 // Run build
 build().catch(err => {
   console.error('Build script error:');
