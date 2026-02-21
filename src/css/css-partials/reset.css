@@ -1,0 +1,42 @@
+html {
+  color-scheme: light dark;
+  text-size-adjust: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: var(--lh);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+iframe {
+  border: 0;
+}
+
+summary {
+  cursor: pointer;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}

@@ -1,0 +1,93 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+pre,
+table,
+fieldset,
+figure,
+figcaption,
+blockquote {
+  margin-block: 0 1rem;
+  line-height: var(--lh);
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+li ol,
+li ul {
+  margin-bottom: 0;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: var(--line);
+  height: 0;
+  margin-block: var(--lh);
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--ff-mono);
+  font-style: normal;
+  font-weight: normal;
+}
+
+code {
+  display: inline-block;
+  padding-inline: 0.25em;
+  color: var(--t-code);
+  background-color: var(--bg-code);
+}
+
+pre {
+  font-style: normal;
+  font-weight: normal;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  background-color: var(--bg-code);
+}

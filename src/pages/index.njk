@@ -1,0 +1,13 @@
+---
+title: "Welcome to Minjucks, the Minimal Nunjucks SSG"
+#description: "Unless you uncomment this line, the default description will be used from source/data/metadescription.json"
+layout: "_includes/layout.njk"
+---
+
+<p>Minjucks is intended for small design-heavy static sites, e.g. a portfolio or a product landing page. If you want to build a content-leavy site, consider using a different static site generator that is more suited to that purpose.</p>
+
+<p>Minjucks uses <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a> templating, which is easy to learn. Minjucks also supports YAML frontmatter in pages, using <a href="https://github.com/jonschlinkert/gray-matter" target="_blank">gray-matter</a>).</p>
+
+<p><a href="https://postcss.org" target="_blank">PostCSS</a> is included for styling, but you can use plain CSS if you prefer. It is being used here to import stylesheet partials, so that only one CSS file is generated for the entire site. <a href="https://cssnano.github.io/cssnano/">CSSNANO</a> is used to optimize and minify the CSS output.</p>
+
+<p><a href="https://browsersync.io" target="_blank">Browser Sync</a> is included for development, which provides live reloading and a local development server. It also synchronizes interactions across multiple devices, making it easier to test your site on different screen sizes and browsers.</p>

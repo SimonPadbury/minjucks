@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: var(--line);
+}
+
+figcaption,
+caption,
+th,
+td {
+  padding: var(--p-cell);
+}

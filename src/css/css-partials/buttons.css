@@ -1,0 +1,25 @@
+input:is([type="button"], [type="submit"], [type="reset"]),
+button,
+.btn {
+  display: inline-flex;
+  height: var(--h-input);
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: var(--p-cell);
+  border: 1px solid transparent;
+  border-radius: var(--r-input);
+  font-family: var(--ff-sans);
+  font-size: inherit;
+  line-height: 1;
+  color: contrast-color(var(--bg-button));
+  background-color: var(--bg-button);
+}
+
+input[type="file"]::file-selector-button {
+  border: 1px solid transparent;
+  border-radius: var(--r-input);
+  color: contrast-color(var(--bg-button));
+  background-color: var(--bg-button);
+}

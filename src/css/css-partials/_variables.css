@@ -1,0 +1,24 @@
+:root {
+  --ff-sans: ui-sans-serif, sans-serif;
+  --ff-serif: ui-serif, serif;
+  --ff-mono: ui-monospace, monospace;
+  --ff: var(--ff-sans);
+  --fs: 100%;
+  --lh: calc(1em + 0.5rem);
+  --t-scale: 1.25;
+  --h1: calc(var(--h2) * var(--t-scale));
+  --h2: calc(var(--h3) * var(--t-scale));
+  --h3: calc(var(--h4) * var(--t-scale));
+  --h4: calc(var(--h5) * var(--t-scale));
+  --h5: calc(var(--fs) * var(--t-scale));
+  --h6: var(--fs);
+  --line: 1px solid light-dark(#ddd, #444);
+  --h-input: 2.5rem;
+  --r-input: 0.25rem;
+  --p-cell: 0.5em 1em;
+  --bg-code: light-dark(#eee, #333);
+  --t-input: CanvasText;
+  --bg-input: light-dark(#f5f5f5, #252525);
+  --t-button: white;
+  --bg-button: light-dark(#ccc, #333);
+}

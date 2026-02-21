@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+Minjucks  </title>
+  <meta name="description" content="A tiny Nunjucks and PostCSS static site generator.">
+  <link rel="stylesheet" href="/css/styles.min.css?v=1.0.0">
+</head>
+<body>
+
+  <a id="nav-skipper" href="#site-header" class="sr-only" tabindex="1">Skip to main content</a>
+
+<nav>
+  <div>
+    <a id="site-title" href="/">Minjucks</a>
+  </div>
+  <div id="nav-links" style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <div id="theme-switcher" style="display: flex; gap: 0.5rem; align-items: center;">
+    <button id="autoSwitch" type="button"><span>⭘</span> <span>Auto theme</span></button>
+    <button id="lightSwitch" type="button"><span>●</span> <span>Light theme</span></button>
+    <button id="darkSwitch" type="button"><span>☾</span> <span>Dark theme</span></button>
+    </div>
+  </div>
+</nav>
+  <header id="site-header">
+    <h1>Welcome to Minjucks, the Minimal Nunjucks SSG</h1>
+  </header>
+
+  <main id="site-main">
+    
+    
+<p>Minjucks is intended for small design-heavy static sites, e.g. a portfolio or a product landing page. If you want to build a content-leavy site, consider using a different static site generator that is more suited to that purpose.</p>
+
+<p>Minjucks uses <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a> templating, which is easy to learn. Minjucks also supports YAML frontmatter in pages, using <a href="https://github.com/jonschlinkert/gray-matter" target="_blank">gray-matter</a>).</p>
+
+<p><a href="https://postcss.org" target="_blank">PostCSS</a> is included for styling, but you can use plain CSS if you prefer. It is being used here to import stylesheet partials, so that only one CSS file is generated for the entire site. <a href="https://cssnano.github.io/cssnano/">CSSNANO</a> is used to optimize and minify the CSS output.</p>
+
+<p><a href="https://browsersync.io" target="_blank">Browser Sync</a> is included for development, which provides live reloading and a local development server. It also synchronizes interactions across multiple devices, making it easier to test your site on different screen sizes and browsers.</p>
+  </main>
+
+  <footer id="site-footer">
+    &copy; 
+    <script type="text/javascript">
+      let currentYear = new Date().getFullYear();
+      document.write(currentYear);
+      </script> 
+    Simon Padbury. All rights reserved.<br>
+    <small>Generated with Minjucks v. 1.0.0</small>
+  </footer>
+
+  <script src="/js/scripts.js?v=1.0.0" defer></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@import "./css-partials/_variables.css";
+@import "./css-partials/reset.css";
+@import "./css-partials/accessibility.css";
+@import "./css-partials/typography.css";
+@import "./css-partials/forms.css";
+@import "./css-partials/buttons.css";
+@import "./css-partials/tables.css";
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+
+  & > nav {
+    position: sticky;
+    top: 0;
+    border-bottom: var(--line);
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: Canvas;
+  }
+
+  & > header {
+    width: min(calc(100% - 2rem), 1280px);
+    margin-inline: auto;
+    h1 {
+      text-wrap: balance;
+    }
+  }
+
+  & > main {
+    width: min(calc(100% - 2rem), 60ch);
+    margin: 0 auto 2rem;
+  }
+
+  & > header {
+    margin-block: clamp(2rem, -4rem + 15vw, 5rem);
+    text-align: center;
+  }
+
+  & > main {
+    flex: 1;
+  }
+
+  & > footer {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+#nav-skipper {
+  padding: var(--p-cell);
+  background-color: AccentColor;
+  color: AccentColorText;
+}
+
+#site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: canvastext;
+  text-decoration: none;
+}
+
+#nav-links a {
+  padding: var(--p-cell);
+  &:not(:hover) {
+    text-decoration: none;
+  }
+}
+
+nav button {
+  padding: 0.25rem 0.5rem;
+  flex-direction: column;
+  gap: 0.125rem;
+  span:last-child {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+  }
+}

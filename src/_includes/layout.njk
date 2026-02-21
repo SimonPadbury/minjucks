@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% if page.isHome %}{{ site.title }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}
+  </title>
+  <meta name="description" content="{{ page.description or site.description }}">
+  <link rel="stylesheet" href="/css/styles.min.css?v={{ version }}">
+</head>
+<body>
+
+  <a id="nav-skipper" href="#site-header" class="sr-only" tabindex="1">Skip to main content</a>
+
+  {% include "_includes/partials/header.njk" %}
+
+  <header id="site-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <main id="site-main">
+    {# Page content goes in here #}
+    {{ content | safe }}
+  </main>
+
+  <footer id="site-footer">
+    &copy; 
+    <script type="text/javascript">
+      let currentYear = new Date().getFullYear();
+      document.write(currentYear);
+      </script> 
+    {{ site.author }}. All rights reserved.<br>
+    <small>Generated with Minjucks v. {{ version }}</small>
+  </footer>
+
+  <script src="/js/scripts.js?v={{ version }}" defer></script>
+</body>
+</html>
