@@ -16,9 +16,11 @@ In the terminal, `yarn istall` will brings in all the `node_modules/` required.
 
 * `yarn dev` for development with Browser-Sync.
 
-* `yarn clean` empties the `docs/` folder.
+* `yarn clean` empties the `docs/` folder (deletes and re-creates it).
 
 * `yarn build` just builds.
+
+* `yarn build:gh` is what I use to include `/minjucks/` as the `baseUrl` so that I can deploy the demo docs on GitHub Pages
 
 ## Notes
 
@@ -37,6 +39,8 @@ Everything ends up in the `docs/` folder for you to deploy:
   * The plain JS `source/js/scripts.css` is a switcher that shows how the CSS light and dark theme works. If you don’t want it, you can delete it.
 
 * Other CSS (e.g. 3rd party framework), JS, images, and fonts are simply passed through (copied) without processing, each in their folders. You can add more folder/file types in `build.js` Any files you put in the `source/` root are also simply passed through to the `docs/` root.
+
+**Note:** put `{{ baseUrl }}` before every link (to pages, images, stylesheets, scripts). Simply use `{{ baseUrl }}` as the link to your homepage `index.html`.
 
 ## Folder/file structure
 

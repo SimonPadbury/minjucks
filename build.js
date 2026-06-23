@@ -121,6 +121,7 @@ async function build() {
 
       const context = {
         ...globalData,
+        baseUrl: globalData.site?.baseUrl || '/',
         page: {
           title: frontMatter.title || globalData.site?.title || 'Untitled Page',
           description: frontMatter.description || globalData.site?.description || '',

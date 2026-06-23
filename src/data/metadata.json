@@ -2,7 +2,8 @@
   "site": {
     "title": "Minjucks",
     "description": "A tiny Nunjucks and PostCSS static site generator.",
-    "author": "Simon Padbury"
+    "author": "Simon Padbury",
+    "baseUrl": "/"
   },
   "version": "1.0.1"
 }
