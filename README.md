@@ -2,6 +2,8 @@
 
 Version 1.0.0
 
+Live demo: https://simonpadbury.github.io/minjucks/
+
 ## What is minjucks?
 
 Minjucks is a minimal static site generator (no Markdown) with nunjucks templating, frontmatter, PostCSS stylesheet processing, and CSSNANO minification.
