@@ -24,7 +24,7 @@ function getUrl(relPath) {
 
 // Load global data (metadata.json)
 let globalData = {
-  site: { title: 'Untitled Site', description: '' },
+  site: { title: 'Untitled Site', description: '', baseUrl: '/' },
   version: '0.0.0'
 };
 
@@ -38,6 +38,15 @@ async function loadGlobalData() {
       ...data,
       site: { ...globalData.site, ...data?.site }
     };
+
+    const envBaseUrl = process.env.BASE_URL;
+    if (envBaseUrl) {
+      globalData.site.baseUrl = envBaseUrl.endsWith('/') ? envBaseUrl : envBaseUrl + '/';
+      console.log(`✅ Using BASE_URL override: ${globalData.site.baseUrl}`);
+    } else {
+      console.log(`Using default baseUrl: ${globalData.site.baseUrl}`);
+    }
+
     console.log(`Global data loaded: ${globalData.site.title} v${globalData.version}`);
   } catch (err) {
     console.warn('Warning: Could not load metadata.json — using defaults');
@@ -121,7 +130,7 @@ async function build() {
 
       const context = {
         ...globalData,
-        baseUrl: globalData.site?.baseUrl || '/',
+        baseUrl: globalData.site.baseUrl,
         page: {
           title: frontMatter.title || globalData.site?.title || 'Untitled Page',
           description: frontMatter.description || globalData.site?.description || '',
