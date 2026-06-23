@@ -4,5 +4,5 @@
     "description": "A tiny Nunjucks and PostCSS static site generator.",
     "author": "Simon Padbury"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

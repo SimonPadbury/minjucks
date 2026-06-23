@@ -14,13 +14,13 @@ In the terminal, `yarn istall` will brings in all the `node_modules/` required.
 
 * `yarn dev` for development with Browser-Sync.
 
-* `yarn clean` empties the `public/` folder.
+* `yarn clean` empties the `docs/` folder.
 
 * `yarn build` just builds.
 
 ## Notes
 
-Everything ends up in the `public/` folder for you to deploy:
+Everything ends up in the `docs/` folder for you to deploy:
 
 * `src/pages` nunjuck files are used to build HTML files (pretty URLs). You can nest pages in folders, and your folder structure will also be replicated in the publif folder.
 
@@ -34,7 +34,7 @@ Everything ends up in the `public/` folder for you to deploy:
   * Simple site CSS is included. Start here or delete and start over, do whatever you like. `build.js` expects your base CSS file to be `source/css/styles.css` – you can change that.
   * The plain JS `source/js/scripts.css` is a switcher that shows how the CSS light and dark theme works. If you don’t want it, you can delete it.
 
-* Other CSS (e.g. 3rd party framework), JS, images, and fonts are simply passed through (copied) without processing, each in their folders. You can add more folder/file types in `build.js` Any files you put in the `source/` root are also simply passed through to the `public/` root.
+* Other CSS (e.g. 3rd party framework), JS, images, and fonts are simply passed through (copied) without processing, each in their folders. You can add more folder/file types in `build.js` Any files you put in the `source/` root are also simply passed through to the `docs/` root.
 
 ## Folder/file structure
 
@@ -56,7 +56,7 @@ minjucks/
 │   │   └── logo.svg
 │   └── pages/
 │       └── index.njk
-├── public/               ← built output
+├── docs/               ← built output
 ├── dev.js
 ├── build.js
 ├── postcss.config.js

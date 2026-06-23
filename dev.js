@@ -12,7 +12,7 @@ try {
 
 browserSync.init({
   server: {
-    baseDir: 'public',
+    baseDir: 'docs',
     index: 'index.html'
   },
   open: true,
@@ -24,7 +24,7 @@ browserSync.init({
 browserSync.watch('src/**/*.css').on('change', (filepath) => {
   console.log(`CSS change detected: ${filepath} → rebuilding CSS only...`);
 
-  exec('npx postcss src/css/styles.css -o public/css/styles.min.css --verbose', (err, stdout, stderr) => {
+  exec('npx postcss src/css/styles.css -o docs/css/styles.min.css --verbose', (err, stdout, stderr) => {
     if (err) {
       console.error('CSS rebuild failed:');
       console.error(stderr || err.message);

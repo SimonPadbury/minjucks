@@ -6,7 +6,7 @@ const fastGlob = require('fast-glob');
 const grayMatter = require('gray-matter');
 
 const SRC = 'src';
-const DEST = 'public';
+const DEST = 'docs';
 
 // Pretty URls with trailing-slash URL for templates
 function getUrl(relPath) {
@@ -92,10 +92,10 @@ async function build() {
   // 3. Build & minify CSS
   try {
     execSync(
-      'npx postcss src/css/styles.css -o public/css/styles.min.css --verbose',
+      'npx postcss src/css/styles.css -o docs/css/styles.min.css --verbose',
       { stdio: 'inherit' }
     );
-    console.log('CSS built → public/css/styles.min.css');
+    console.log('CSS built → docs/css/styles.min.css');
   } catch (err) {
     console.error('CSS build failed:');
     console.error(err.message);

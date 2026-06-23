@@ -4,7 +4,7 @@
   "scripts": {
     "build": "node build.js",
     "dev": "node dev.js",
-    "clean": "rm -rf public && mkdir -p public"
+    "clean": "rm -rf docs && mkdir -p docs"
   },
   "author": "Simon Padbury",
   "license": "MIT",
